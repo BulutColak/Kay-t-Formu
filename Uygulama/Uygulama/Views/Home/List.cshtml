@@ -1,0 +1,44 @@
+﻿@model List<Uygulama.Models.User>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>List</title>
+</head>
+<body>
+    <div class="container">
+        <div>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Ad</th>
+                        <th>Soyad</th>
+                        <th>Email</th>
+                        <th>Telefon</th>
+                        <th>Yaş</th>
+                        <th>Cinsiyet</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var user in Model)
+                    {
+                        <tr>
+                            <td>@user.Name</td>
+                            <td>@user.Surname</td>
+                            <td>@user.Email</td>
+                            <td>@user.Phone</td>
+                            <td>@user.Age</td>
+                            <td>@user.Gender</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
